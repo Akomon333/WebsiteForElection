@@ -1,122 +1,210 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#0b233f" />
-  <title>Community Campaign — Template</title>
+  <meta name="theme-color" content="#0a4d8c" />
+  <title>Акимa Щемелининa в noortevolikogu! </title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav" role="navigation" aria-label="Main navigation">
-      <div class="brand">Candidate HQ</div>
-      <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">☰</button>
+    <nav class="nav">
+      <div class="brand">Аким</div>
+      <button class="nav-toggle" aria-label="Меню">☰</button>
+      <ul class="nav-links">
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#issues">Программа</a></li>
+        <li><a href="#events">События</a></li>
+        <li><a href="#vote">Как голосовать</a></li>
+        <li><a href="#volunteer">Присоединиться</a></li>
+      </ul>
     </nav>
-
-    <section class="hero large" id="home" role="banner">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <div class="hero-left">
-          <div class="avatar large" aria-hidden="true"></div>
-          <div class="meta">
-            <h1 class="name">Akim stsemelinin</h1>
-            <p class="slogan">Practical solutions. Student-first.</p>
-            <div class="hero-ctas">
-              <a class="btn primary" href="#volunteer">Volunteer</a>
-              <a class="btn ghost" id="plan-btn" href="#issues"="">See My Plan</a>
-            </div>
-            <div class="stats" aria-hidden="true">
-              <div class="stat"><span class="count" data-target="1250">0</span><small>Supporters</small></div>
-              <div class="stat"><span class="count" data-target="14">0</span><small>Events</small></div>
-              <div class="stat"><span class="count" data-target="8">0</span><small>Endorsements</small></div>
-            </div>
-          </div>
-        </div>
-        <div class="hero-right">
-          <div class="speech-card card">
-            <h3>Mission</h3>
-            <p>To improve our school system and empower students with practical skills, supportive environments, and greater access to resources.</p>
-            <a class="small-link" href="#about">Learn more</a>
-          </div>
-        </div>
-      </div>
-      <!-- wave removed for a cleaner header -->
-    </section>
   </header>
 
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <h1>Аким <span class="highlight">Щемелинин</span></h1>
+        <p class="slogan">Улучшим школу вместе!</p>
+        <div class="hero-ctas">
+          <a class="btn primary" href="#volunteer">Присоединиться</a>
+          <a class="btn secondary" href="#issues">Программа</a>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-number count" data-target="1250">0</span>
+            <span class="stat-label">Сторонников</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number count" data-target="14">0</span>
+            <span class="stat-label">Мероприятий</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number count" data-target="8">0</span>
+            <span class="stat-label">Поддержки</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="avatar">Фото</div>
+          <h3>Миссия</h3>
+          <p>Стремиться к развитию школьной системы, где комфорт и знания идут рука об руку</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <main>
-    <section id="about" class="card reveal">
-      <h2>About Me</h2>
-      <p>I want to improve the school system and support students' personal growth. I also enjoy programming in my free time.</p>
-      <p>I study at our local high school and have organized peer tutoring and coding clubs. I believe practical skills, mental-health support, and student-led activities make schools stronger.</p>
+    <section id="about" class="section reveal">
+      <div class="section-header">
+        <h2>Обо мне</h2>
+      </div>
+      <div class="about-content">
+        <p>Я хочу улучшить школьную систему и поддержать личностный рост учеников. Также в свободное время я увлекаюсь программированием</p>
+        <p>Я активно участвую в проектах и конференциях, знакомлюсь с интересными людьми и постоянно открываю для себя что-то новое</p>
+      </div>
     </section>
 
-    <section id="issues" class="card reveal">
-      <h2>Issues &amp; Positions</h2>
+    <section id="issues" class="section reveal">
+      <div class="section-header">
+        <h2>Ключевые вопросы</h2>
+        <p>Моя программа сосредоточена на практических улучшениях, которые напрямую влияют на жизнь и обучение студентов</p>
+      </div>
       <div class="issues-grid">
         <article class="issue">
-          <h3>Non-formal Education</h3>
-          <p>Introduce workshops, community-led classes, and project-based learning that complement the curriculum and help students explore skills outside standard lessons.</p>
+          <div class="issue-icon">📚</div>
+          <h3>Улучшение уроков</h3>
+          <p>Школьные уроки можно улучшить играми, практическими заданиями, командной работой и обсуждениями, чтобы сделать обучение более увлекательным и эффективным</p>
         </article>
         <article class="issue">
-          <h3>Hobbies &amp; Training</h3>
-          <p>Encourage schools to build programs around students' hobbies — coding, arts, sports — and offer flexible scheduling for training and mentorship.</p>
+          <div class="issue-icon">🎯</div>
+          <h3>Хобби и тренировки</h3>
+          <p>Если ученик участвует в соревновании или другом мероприятии, связанном с его хобби, в учебный день, он имеет право посетить его без начисления прогулов</p>
         </article>
         <article class="issue">
-          <h3>Hot Drinks in Breaks</h3>
-          <p>Ensure safe access to hot beverages during breaks to support student well-being — supervised, affordable, and available at all break times.</p>
+          <div class="issue-icon">☕</div>
+          <h3>Горячие напитки должны быть доступны всем на любой перемене продолжительностью более 5 минут</h3>
+          <p></p>
         </article>
         <article class="issue">
-          <h3>Funding for Schools</h3>
-          <p>Advocate for increased funding focused on learning materials, mental health services, library resources, and extracurricular programs.</p>
+          <div class="issue-icon">💰</div>
+          <h3>Финансирование школ</h3>
+          <p>Школы должны получать больше финансирования для создания кружков и секций, а также для улучшения зданий и других нужд</p>
         </article>
       </div>
     </section>
 
-    <section id="events" class="card reveal">
-      <h2>Upcoming Events</h2>
+    <section id="events" class="section reveal">
+      <div class="section-header">
+        <h2>Предстоящие события</h2>
+        <p>Присоединяйтесь к нам на этих мероприятиях, чтобы узнать больше и принять участие в нашей кампании</p>
+      </div>
       <div class="events-grid">
         <div class="event">
-          <time>Oct 14 • 4:00 PM</time>
-          <h4>Community Meet &amp; Greet</h4>
-          <p>Join us at the school auditorium to share ideas and ask questions.</p>
-          <a class="small-link" href="#volunteer">RSVP</a>
+          <time>14 окт • 16:00</time>
+          <h4>Встреча с сообществом</h4>
+          <p>Присоединяйтесь к нам в школьном актовом зале, чтобы поделиться идеями и задать вопросы.</p>
+          <a href="#volunteer">Зарегистрироваться</a>
         </div>
-
         <div class="event">
-          <time>Oct 21 • 3:00 PM</time>
-          <h4>Workshop: Coding for Beginners</h4>
-          <p>Free intro session — bring a laptop. Hands-on practice and mentorship.</p>
-          <a class="small-link" href="#volunteer">Sign up</a>
+          <time>21 окт • 15:00</time>
+          <h4>Мастер-класс: Программирование для начинающих</h4>
+          <p>Бесплатное вводное занятие — возьмите с собой ноутбук. Практика и наставничество.</p>
+          <a href="#volunteer">Записаться</a>
         </div>
-
         <div class="event">
-          <time>Nov 02 • 1:00 PM</time>
-          <h4>Student Townhall</h4>
-          <p>Open forum to discuss school policies and priorities.</p>
-          <a class="small-link" href="#volunteer">Attend</a>
+          <time>2 ноя • 13:00</time>
+          <h4>Студенческая ратуша</h4>
+          <p>Открытый форум для обсуждения школьной политики и приоритетов.</p>
+          <a href="#volunteer">Посетить</a>
         </div>
       </div>
     </section>
 
-    <section id="endorsements" class="card reveal">
-      <h2>Endorsements</h2>
+    <section id="endorsements" class="section reveal">
+      <div class="section-header">
+        <h2>Поддержка</h2>
+      </div>
       <ul class="endorsements">
-        <li>Student Council — "A voice we can trust"</li>
-        <li>Local Teachers Group — "Practical and committed"</li>
-        <li>Community Club — "Focuses on students' needs"</li>
+        <li><strong>Sagar Yadav</strong> — «Замечательная идея, школы давно пора улучшать!»</li>
       </ul>
     </section>
 
-    <section id="volunteer" class="card reveal">
-      <h2>Volunteer &amp; Get Involved</h2>
-      <p>Help organize events, run outreach, or lead a workshop. Fill the quick form below and we will contact you.</p>
-      <form id="volunteer-form" class="form" action="https://script.google.com/macros/s/AKfycbybnaa6FEY4SqW3JS3CLR01HU3jnEaKRes4AG5zzF9E74OibltWdLcbUFHi0giHS8FZ/exec" method="POST">
+    <section id="vote" class="section reveal">
+      <div class="section-header">
+        <h2>Как проголосавать за меня</h2>
+        <p>Ваш голос имеет значение! Вот всё, что вам нужно знать, чтобы поддержать нашу идею</p>
+      </div>
+      <div class="vote-info-banner">
+        <div class="vote-info-icon">🗳️</div>
+        <div class="vote-info-text">
+          <h3>Дата голосования</h3>
+          <p><strong>Ноябрь 2025</strong> • С 10 до 15 числа</p>
+          <p class="vote-location">📍 Ссылка на сайт будет добавлена ближе к дням голосования</p>
+        </div>
+      </div>
+      <div class="vote-grid">
+        <div class="vote-step">
+          <div class="vote-step-number">1</div>
+          <div class="vote-step-content">
+            <h3>Голосование</h3>
+            <p>Информация о том как проголосовать будет добавлена ближе к дням голосования</p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="vote-cta">
+        <div class="vote-cta-icon">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor" opacity="0.9"/>
+          </svg>
+        </div>
+        <div class="vote-cta-content">
+          <h3>Дайте услышать свой голос</h3>
+          <p>Каждый голос имеет значение для того, чтобы сделать наши школы лучше. Вместе мы можем создать реальные изменения!</p>
+          <div class="vote-cta-buttons">
+            <a class="btn btn-white" href="#volunteer">Присоединиться к команде</a>
+            <a class="btn btn-outline" href="#issues">Узнать больше</a>
+          </div>
+        </div>
+      </div>
+      <div class="vote-faq">
+        <h3>Часто задаваемые вопросы</h3>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h4>Кто может голосовать?</h4>
+            <p>Все, чей возраст составляет 14–21 год</p>
+          </div>
+          <div class="faq-item">
+            <h4>Через какие социальные сети можно получать информацию о событиях?</h4>
+            <p>У нас есть телеграмм канал https://t.me/+NpBEMykX8f0yYzJk и у меня есть страница в Facebook https://www.facebook.com/profile.php?id=61570973228399.Tам будет информация про события и опросники на тему улучшения школы</p>
+          </div>
+          <div class="faq-item">
+            <h4>Как я могу предложить свои идеи?</h4>
+            <p>Мне можно написать на Gmail или в Facebook</p>
+          </div>
+          <div class="faq-item">
+            <h4>Чем можно помочь в команде?</h4>
+            <p>В команде задачи распределяются с учётом ваших навыков, интересов и других факторов. Всегда найдется что-нибудь для каждого</p>
+          </div>
+          <div class="faq-item">
+            <h4>Что делать если я хочу помочь но у меня нет времени?</h4>
+            <p>Расскажите своим друзьям о нас, этим вы поможете нашим идеям быть услышанными и воплощёнными в жизнь</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="volunteer" class="volunteer-section reveal">
+      <h2>Свяжитесь с нами</h2>
+      <p>Хотите поучаствовать в событии, предложить свои идеи или задать вопрос, если вы не нашли нужную информацию на сайте? Заполните форму ниже, и мы свяжемся с вами</p>
+      <form id="volunteer-form" class="form" action="https://script.google.com/macros/s/AKfycbx7khdOYNvZsMCntQs72LeAaPtRW1sRCjjRMEuNZJuNw_DvSg6pAfEAEZDPSFtO1BIO/exec">
         <div class="form-row">
-          <label for="v-name">Name</label>
+          <label for="v-name">Имя</label>
           <input id="v-name" name="name" type="text" required />
         </div>
         <div class="form-row">
@@ -124,40 +212,30 @@
           <input id="v-email" name="email" type="email" required />
         </div>
         <div class="form-row">
-          <label for="v-interest">I can help with</label>
+          <label for="v-interest">Тема</label>
           <select id="v-interest" name="interest">
-            <option>Events</option>
-            <option>Outreach</option>
-            <option>Workshops</option>
-            <option>Social Media</option>
+            <option>Мероприятия</option>
+            <option>Волонтерство</option>
+            <option>Ваша идея</option>
+            <option>Другое</option>
           </select>
         </div>
         <div class="form-actions">
-          <button class="btn primary" type="submit">Join the Team</button>
-          <div id="volunteer-msg" class="muted" aria-live="polite"></div>
+          <button class="btn primary" type="submit">Отправить</button>
+          <div id="volunteer-msg" class="form-msg"></div>
         </div>
       </form>
     </section>
-
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      <!-- Replaced footer content with a Telegram invitation link -->
-      <div class="footer-telegram">
-        <a class="telegram-link" href="https://t.me/your_invite_link" target="_blank" rel="noopener noreferrer" aria-label="Join on Telegram">
-          <!-- Telegram SVG icon -->
-          <svg width="20" height="20" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="120" cy="120" r="120" fill="currentColor" opacity="0.08" />
-            <path d="M50 120L190 80L130 140L110 180L94 116L50 120Z" fill="currentColor" />
-          </svg>
-          <span>Join our Telegram</span>
-        </a>
-      </div>
+      <a class="telegram-link" href="https://t.me/+NpBEMykX8f0yYzJk" target="_blank" rel="noopener">
+        <span>Нажмите чтобы присоеденится к нашемы телеграм каналу</span>
+      </a>
     </div>
-    <!-- copyright removed -->
-   </footer>
+  </footer>
 
-   <script src="script.js"></script>
- </body>
- </html>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,129 +1,143 @@
-document.addEventListener('DOMContentLoaded', () => {
-  /* ===== NAV TOGGLE ===== */
-  const toggle = document.querySelector('.nav-toggle');
-  const links = document.querySelector('.nav-links');
-
-  if (toggle) {
-    toggle.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!expanded));
-      links.classList.toggle('open');
-      toggle.textContent = links.classList.contains('open') ? '✕' : '☰';
+/* ===== COUNTER ANIMATION ===== */
+const counters = document.querySelectorAll('.count');
+if (counters.length) {
+  const runCounter = (el, target) => {
+    let current = 0;
+    const step = Math.max(1, Math.floor(target / 60));
+    const id = setInterval(() => {
+      current += step;
+      if (current >= target) {
+        el.textContent = target;
+        clearInterval(id);
+      } else {
+        el.textContent = current;
+      }
+    }, 20);
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        counters.forEach(c => {
+          runCounter(c, parseInt(c.dataset.target || '0', 10));
+        });
+        observer.disconnect();
+      }
     });
-  }
+  }, { threshold: 0.5 });
+  
+  const heroSection = document.querySelector('.hero');
+  if (heroSection) observer.observe(heroSection);
+}
 
-  /* ===== REVEAL ON SCROLL ===== */
-  const reveals = document.querySelectorAll('.reveal');
-  if (reveals.length) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) e.target.classList.add('visible');
-      });
-    }, { threshold: 0.12 });
-    reveals.forEach(r => io.observe(r));
-  }
-
-  /* ===== HERO COUNTERS ===== */
-  const counters = document.querySelectorAll('.count');
-  if (counters.length) {
-    const runCounter = (el, target) => {
-      let current = 0;
-      const step = Math.max(1, Math.floor(target / 120));
-      const id = setInterval(() => {
-        current += step;
-        if (current >= target) { el.textContent = target; clearInterval(id); }
-        else el.textContent = current;
-      }, 12);
-    };
-
-    const heroSection = document.querySelector('.hero');
-    if (heroSection) {
-      const heroObserver = new IntersectionObserver((entries, observer) => {
-        if (entries.some(e => e.isIntersecting)) {
-          counters.forEach(c => runCounter(c, parseInt(c.dataset.target || '0', 10)));
-          observer.disconnect();
-        }
-      }, { threshold: 0.2 });
-      heroObserver.observe(heroSection);
+/* ===== SMOOTH SCROLL ===== */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', (e) => {
+    const href = a.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  }
-
-  /* ===== SMOOTH SCROLL ===== */
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', (ev) => {
-      const href = a.getAttribute('href');
-      if (href === '#') return;
-      const target = document.querySelector(href);
-      if (target) { ev.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-    });
   });
+});
 
-  /* ===== PLAN BUTTON ZOOM ===== */
-  const planBtn = document.getElementById('plan-btn');
-  const issuesGrid = document.querySelector('.issues-grid');
-  if (planBtn && issuesGrid) {
-    planBtn.addEventListener('click', () => {
-      issuesGrid.classList.add('zoom-target');
-      setTimeout(() => issuesGrid.classList.add('zoomed'), 30);
-      setTimeout(() => issuesGrid.classList.remove('zoomed'), 1600);
-      setTimeout(() => issuesGrid.classList.remove('zoom-target'), 2000);
+/* ===== VOLUNTEER FORM (JSONP) ===== */
+const vform = document.getElementById('volunteer-form');
+const vmsg = document.getElementById('volunteer-msg');
+
+if (vform) {
+  const submitBtn = vform.querySelector('button[type="submit"]');
+  let submitting = false;
+
+  window.volunteerCallback = function(data) {
+    submitting = false;
+    submitBtn.disabled = false;
+
+    if (data.success) {
+      vmsg.textContent = '✓ Спасибо! Мы с вами скоро свяжемся.';
+      vmsg.style.color = '#00ba34';
+      vform.reset();
+    } else {
+      vmsg.textContent = '× Ошибка отправки. Пожалуйста, повторите попытку.';
+      vmsg.style.color = '#ef4444';
+    }
+
+    const scripts = document.querySelectorAll('script[data-volunteer-jsonp]');
+    if (scripts.length) scripts[scripts.length - 1].remove();
+  };
+
+  vform.addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    if (submitting) return;
+
+    const name = vform.elements['name'].value.trim();
+    const email = vform.elements['email'].value.trim();
+    const interest = vform.elements['interest'].value;
+
+    if (!name || !email) {
+      vmsg.textContent = 'Please fill in all fields.';
+      vmsg.style.color = '#ef4444';
+      return;
+    }
+
+    vmsg.textContent = 'Отправляем...';
+    vmsg.style.color = '#536471';
+    submitting = true;
+    submitBtn.disabled = true;
+
+    const params = new URLSearchParams({
+      name: name,
+      email: email,
+      interest: interest,
+      callback: 'volunteerCallback'
     });
-  }
 
-  /* ===== VOLUNTEER FORM (JSONP) ===== */
-  const vform = document.getElementById('volunteer-form');
-  const vmsg = document.getElementById('volunteer-msg');
-
-  if (vform) {
-    const submitBtn = vform.querySelector('button[type="submit"]');
-    let submitting = false; // prevent double submits
-
-    // Global callback for JSONP
-    window.volunteerCallback = function(data) {
+    const script = document.createElement('script');
+    script.src = vform.action + '?' + params.toString();
+    script.setAttribute('data-volunteer-jsonp', 'true');
+    
+    script.onerror = function() {
       submitting = false;
       submitBtn.disabled = false;
-
-      if (data.success) {
-        vmsg.textContent = 'Thanks — your signup was received.';
-        vform.reset();
-      } else {
-        vmsg.textContent = 'Submission failed. Please email akomon10@gmail.com.';
-      }
-
-      // Remove the last injected JSONP script
-      const scripts = document.querySelectorAll('script[data-volunteer-jsonp]');
-      if (scripts.length) scripts[scripts.length - 1].remove();
+      vmsg.textContent = '× Connection failed. Please try again.';
+      vmsg.style.color = '#ef4444';
     };
+    
+    document.body.appendChild(script);
+  });
+}
 
-    vform.addEventListener('submit', (ev) => {
-      ev.preventDefault();
-      if (submitting) return; // prevent double submit
+/* ===== MOBILE MENU TOGGLE ===== */
+const toggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-      const name = vform.elements['name'].value.trim();
-      const email = vform.elements['email'].value.trim();
-      const interest = vform.elements['interest'].value;
-
-      if (!name || !email) {
-        vmsg.textContent = 'Please fill in name and email.';
-        return;
+if (toggle && navLinks) {
+  toggle.addEventListener('click', () => {
+    const isOpen = navLinks.style.display === 'flex';
+    navLinks.style.display = isOpen ? 'none' : 'flex';
+    toggle.textContent = isOpen ? '☰' : '✕';
+    
+    if (!isOpen) {
+      navLinks.style.position = 'absolute';
+      navLinks.style.top = '100%';
+      navLinks.style.left = '0';
+      navLinks.style.right = '0';
+      navLinks.style.backgroundColor = 'white';
+      navLinks.style.flexDirection = 'column';
+      navLinks.style.padding = '1rem';
+      navLinks.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+      navLinks.style.borderTop = '1px solid var(--border)';
+    }
+  });
+  
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 640) {
+        navLinks.style.display = 'none';
+        toggle.textContent = '☰';
       }
-
-      vmsg.textContent = 'Sending...';
-      submitting = true;
-      submitBtn.disabled = true;
-
-      // Build JSONP GET request
-      const params = new URLSearchParams({
-        name: name,
-        email: email,
-        interest: interest,
-        callback: 'volunteerCallback'
-      });
-
-      const script = document.createElement('script');
-      script.src = vform.action + '?' + params.toString();
-      script.setAttribute('data-volunteer-jsonp', 'true');
-      document.body.appendChild(script);
     });
-  }
-});
+  });
+}
