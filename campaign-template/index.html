@@ -3,22 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b233f" />
   <title>Community Campaign — Template</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <nav class="nav" role="navigation" aria-label="Main navigation">
-      <div class="brand">Community Candidate</div>
+      <div class="brand">Candidate HQ</div>
       <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">☰</button>
-      <ul id="primary-menu" class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#issues">Issues</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#volunteer">Volunteer</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
     </nav>
 
     <section class="hero large" id="home" role="banner">
@@ -27,11 +22,11 @@
         <div class="hero-left">
           <div class="avatar large" aria-hidden="true"></div>
           <div class="meta">
-            <h1 class="name">Community Candidate</h1>
-            <p class="slogan">Your Voice, Our Future — Practical ideas for better schools</p>
+            <h1 class="name">Akim stsemelinin</h1>
+            <p class="slogan">Practical solutions. Student-first.</p>
             <div class="hero-ctas">
               <a class="btn primary" href="#volunteer">Volunteer</a>
-              <a class="btn ghost" href="#plan">See My Plan</a>
+              <a class="btn ghost" id="plan-btn" href="#issues"="">See My Plan</a>
             </div>
             <div class="stats" aria-hidden="true">
               <div class="stat"><span class="count" data-target="1250">0</span><small>Supporters</small></div>
@@ -48,9 +43,7 @@
           </div>
         </div>
       </div>
-      <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0,40 C360,0 1080,80 1440,40 L1440,80 L0,80 Z" fill="white"/>
-      </svg>
+      <!-- wave removed for a cleaner header -->
     </section>
   </header>
 
@@ -121,7 +114,7 @@
     <section id="volunteer" class="card reveal">
       <h2>Volunteer &amp; Get Involved</h2>
       <p>Help organize events, run outreach, or lead a workshop. Fill the quick form below and we will contact you.</p>
-      <form id="volunteer-form" class="form">
+      <form id="volunteer-form" class="form" action="https://script.google.com/macros/s/AKfycbyG9SEaH_suZHyakK8HBlk8ZR4dLY2eNElyj54xz_EngloQ218nHoauUFhGqm86qIAZ/exec" method="POST">
         <div class="form-row">
           <label for="v-name">Name</label>
           <input id="v-name" name="name" type="text" required />
@@ -146,39 +139,25 @@
       </form>
     </section>
 
-    <section id="contact" class="card reveal">
-      <h2>Contact &amp; Newsletter</h2>
-      <p>Questions? Want updates in your inbox? Subscribe to the newsletter.</p>
-      <form id="subscribe-form" class="form-inline">
-        <label class="sr-only" for="s-email">Email</label>
-        <input id="s-email" type="email" placeholder="Your email" required />
-        <button class="btn" type="submit">Subscribe</button>
-        <div id="subscribe-msg" class="muted" aria-live="polite"></div>
-      </form>
-    </section>
-
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      <div class="footer-brand">
-        <strong>Community Candidate</strong>
-        <p class="muted">A template campaign site for demonstrations and teaching.</p>
-      </div>
-      <nav class="footer-nav" aria-label="Footer links">
-        <a href="#about">About</a>
-        <a href="#issues">Issues</a>
-        <a href="#volunteer">Volunteer</a>
-      </nav>
-      <div class="footer-social">
-        <a href="#">Instagram</a>
-        <a href="#">Twitter</a>
-        <a href="#">Email</a>
+      <!-- Replaced footer content with a Telegram invitation link -->
+      <div class="footer-telegram">
+        <a class="telegram-link" href="https://t.me/your_invite_link" target="_blank" rel="noopener noreferrer" aria-label="Join on Telegram">
+          <!-- Telegram SVG icon -->
+          <svg width="20" height="20" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="120" cy="120" r="120" fill="currentColor" opacity="0.08" />
+            <path d="M50 120L190 80L130 140L110 180L94 116L50 120Z" fill="currentColor" />
+          </svg>
+          <span>Join our Telegram</span>
+        </a>
       </div>
     </div>
-    <p class="copyright">© 2025 Community Campaign — Template</p>
-  </footer>
+    <!-- copyright removed -->
+   </footer>
 
-  <script src="script.js"></script>
-</body>
-</html>
+   <script src="script.js"></script>
+ </body>
+ </html>
