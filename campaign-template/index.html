@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Community Campaign — Template</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="brand">Community Candidate</div>
+      <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">☰</button>
+      <ul id="primary-menu" class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#issues">Issues</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#volunteer">Volunteer</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero large" id="home" role="banner">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-left">
+          <div class="avatar large" aria-hidden="true"></div>
+          <div class="meta">
+            <h1 class="name">Community Candidate</h1>
+            <p class="slogan">Your Voice, Our Future — Practical ideas for better schools</p>
+            <div class="hero-ctas">
+              <a class="btn primary" href="#volunteer">Volunteer</a>
+              <a class="btn ghost" href="#plan">See My Plan</a>
+            </div>
+            <div class="stats" aria-hidden="true">
+              <div class="stat"><span class="count" data-target="1250">0</span><small>Supporters</small></div>
+              <div class="stat"><span class="count" data-target="14">0</span><small>Events</small></div>
+              <div class="stat"><span class="count" data-target="8">0</span><small>Endorsements</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="speech-card card">
+            <h3>Mission</h3>
+            <p>To improve our school system and empower students with practical skills, supportive environments, and greater access to resources.</p>
+            <a class="small-link" href="#about">Learn more</a>
+          </div>
+        </div>
+      </div>
+      <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,40 C360,0 1080,80 1440,40 L1440,80 L0,80 Z" fill="white"/>
+      </svg>
+    </section>
+  </header>
+
+  <main>
+    <section id="about" class="card reveal">
+      <h2>About Me</h2>
+      <p>I want to improve the school system and support students' personal growth. I also enjoy programming in my free time.</p>
+      <p>I study at our local high school and have organized peer tutoring and coding clubs. I believe practical skills, mental-health support, and student-led activities make schools stronger.</p>
+    </section>
+
+    <section id="issues" class="card reveal">
+      <h2>Issues &amp; Positions</h2>
+      <div class="issues-grid">
+        <article class="issue">
+          <h3>Non-formal Education</h3>
+          <p>Introduce workshops, community-led classes, and project-based learning that complement the curriculum and help students explore skills outside standard lessons.</p>
+        </article>
+        <article class="issue">
+          <h3>Hobbies &amp; Training</h3>
+          <p>Encourage schools to build programs around students' hobbies — coding, arts, sports — and offer flexible scheduling for training and mentorship.</p>
+        </article>
+        <article class="issue">
+          <h3>Hot Drinks in Breaks</h3>
+          <p>Ensure safe access to hot beverages during breaks to support student well-being — supervised, affordable, and available at all break times.</p>
+        </article>
+        <article class="issue">
+          <h3>Funding for Schools</h3>
+          <p>Advocate for increased funding focused on learning materials, mental health services, library resources, and extracurricular programs.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="events" class="card reveal">
+      <h2>Upcoming Events</h2>
+      <div class="events-grid">
+        <div class="event">
+          <time>Oct 14 • 4:00 PM</time>
+          <h4>Community Meet &amp; Greet</h4>
+          <p>Join us at the school auditorium to share ideas and ask questions.</p>
+          <a class="small-link" href="#volunteer">RSVP</a>
+        </div>
+
+        <div class="event">
+          <time>Oct 21 • 3:00 PM</time>
+          <h4>Workshop: Coding for Beginners</h4>
+          <p>Free intro session — bring a laptop. Hands-on practice and mentorship.</p>
+          <a class="small-link" href="#volunteer">Sign up</a>
+        </div>
+
+        <div class="event">
+          <time>Nov 02 • 1:00 PM</time>
+          <h4>Student Townhall</h4>
+          <p>Open forum to discuss school policies and priorities.</p>
+          <a class="small-link" href="#volunteer">Attend</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="endorsements" class="card reveal">
+      <h2>Endorsements</h2>
+      <ul class="endorsements">
+        <li>Student Council — "A voice we can trust"</li>
+        <li>Local Teachers Group — "Practical and committed"</li>
+        <li>Community Club — "Focuses on students' needs"</li>
+      </ul>
+    </section>
+
+    <section id="volunteer" class="card reveal">
+      <h2>Volunteer &amp; Get Involved</h2>
+      <p>Help organize events, run outreach, or lead a workshop. Fill the quick form below and we will contact you.</p>
+      <form id="volunteer-form" class="form">
+        <div class="form-row">
+          <label for="v-name">Name</label>
+          <input id="v-name" name="name" type="text" required />
+        </div>
+        <div class="form-row">
+          <label for="v-email">Email</label>
+          <input id="v-email" name="email" type="email" required />
+        </div>
+        <div class="form-row">
+          <label for="v-interest">I can help with</label>
+          <select id="v-interest" name="interest">
+            <option>Events</option>
+            <option>Outreach</option>
+            <option>Workshops</option>
+            <option>Social Media</option>
+          </select>
+        </div>
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Join the Team</button>
+          <div id="volunteer-msg" class="muted" aria-live="polite"></div>
+        </div>
+      </form>
+    </section>
+
+    <section id="contact" class="card reveal">
+      <h2>Contact &amp; Newsletter</h2>
+      <p>Questions? Want updates in your inbox? Subscribe to the newsletter.</p>
+      <form id="subscribe-form" class="form-inline">
+        <label class="sr-only" for="s-email">Email</label>
+        <input id="s-email" type="email" placeholder="Your email" required />
+        <button class="btn" type="submit">Subscribe</button>
+        <div id="subscribe-msg" class="muted" aria-live="polite"></div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>Community Candidate</strong>
+        <p class="muted">A template campaign site for demonstrations and teaching.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer links">
+        <a href="#about">About</a>
+        <a href="#issues">Issues</a>
+        <a href="#volunteer">Volunteer</a>
+      </nav>
+      <div class="footer-social">
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+        <a href="#">Email</a>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Community Campaign — Template</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
