@@ -138,21 +138,21 @@ const translations = {
     projects_intro: "Примеры моей работы и инициатив, которые я реализовал.",
     project1_title: "Разработка игр на Roblox",
     project1_text:
-      "С 2021 по 2025 год я создавал игры на Roblox под именами Akomon777 и Akomon333.",
+      "С 2021 по 2025 год я создавал игры на Roblox под именами Akomon777 и Akomon333. Также помогал с разроботкой Undertale:A day of the future в 2023 году.",
     project2_title: "Районные инициативы",
     project2_text: "Участвую в программе “Noored kui linnaosa areng”.",
     project3_title: "Работа с данными",
-    project3_text: "Создаю проекты по прогнозированию. Код доступен на GitHub.",
+    project3_text: "Создаю проекты по прогнозированию. Код доступен на https://github.com/Akomon333.",
     support_title: "Поддержка",
     support_text:
-      "У Акима не только есть знания, он умеет слушать и трудится. Такой лидер нужен каждой нации.",
+      "У Акима не только есть знания, он умеет слушать и трудится. Такой лидер нужен каждой нации. - Sagar Yadav(Работает программистом с 2007 года)",
     events_title: "Предстоящие события",
     events_text: "Пока ничего нет, но скоро появится!",
     vote_title: "Дайте услышать свой голос",
     vote_text:
       "Каждый голос имеет значение для того, чтобы сделать наши школы лучше.",
     vote_date_title: "Дата голосования",
-    vote_date_text: "Ноябрь 2025 • 10–15 число",
+    vote_date_text: "Ноябрь 2025 • 10–16 число",
     vote_step1_title: "Голосование",
     vote_step1_text:
       "Информация о том как проголосовать будет добавлена позже.",
@@ -164,7 +164,7 @@ const translations = {
     faq_q3: "Что если нет времени?",
     faq_a3: "Расскажите о нас друзьям — это тоже помощь!",
     faq_q4: "Как предложить идею?",
-    faq_a4: "Напишите на Gmail или Facebook.",
+    faq_a4: "Напишите на Gmail akimestfornoortevolikogu@gmail.com или Facebook https://www.facebook.com/profile.php?id=61570973228399.",
     faq_q5: "Кто может голосовать?",
     faq_a5: "Все в возрасте от 14 до 21 года.",
   },
@@ -218,23 +218,23 @@ const translations = {
     projects_intro: "Näited minu töödest ja algatustest.",
     project1_title: "Roblox mängude arendamine",
     project1_text:
-      "Aastatel 2021–2025 lõin Robloxis mänge kasutajanimedega Akomon777 ja Akomon333.",
+      "Aastatel 2021–2025 lõin Robloxis mänge kasutajanimedega Akomon777 ja Akomon333. Aitasin kaasa ka Undertale: A day of the future arendamisele 2023. aastal.",
     project2_title: "Linnaosa algatused",
     project2_text:
       "Osalen programmis 'Noored kui linnaosa areng'.",
     project3_title: "Andmetega töötamine",
     project3_text:
-      "Loon prognoosimisprojekte. Kood on saadaval GitHubis.",
+      "Loon prognoosimisprojekte. Kood on saadaval https://github.com/Akomon333.",
     support_title: "Toetus",
     support_text:
-      "Akim mitte ainult ei tea, vaid oskab kuulata ja töötab kõvasti. Sellist juhti on igal rahval vaja.",
+      "Akim mitte ainult ei tea, vaid oskab kuulata ja töötab kõvasti. Sellist juhti on igal rahval vaja. - Sagar Yadav (Programmeeri alates 2007. aastast)",
     events_title: "Tulevased üritused",
     events_text: "Hetkel pole midagi, aga varsti tuleb!",
     vote_title: "Anna oma hääl",
     vote_text:
       "Iga hääl loeb, et muuta meie koolid paremaks.",
     vote_date_title: "Hääletamise kuupäev",
-    vote_date_text: "November 2025 • 10.–15. kuupäev",
+    vote_date_text: "November 2025 • 10.–16. kuupäev",
     vote_step1_title: "Hääletamine",
     vote_step1_text: "Teave hääletamise kohta lisatakse hiljem.",
     faq_title: "KKK",
@@ -245,7 +245,7 @@ const translations = {
     faq_q3: "Mis siis, kui mul pole aega?",
     faq_a3: "Räägi meist oma sõpradele – seegi on abi!",
     faq_q4: "Kuidas ideid esitada?",
-    faq_a4: "Kirjuta Gmaili või Facebooki kaudu.",
+    faq_a4: "Kirjuta Gmaili akimestfornoortevolikogu@gmail.com või Facebooki https://www.facebook.com/profile.php?id=61570973228399 kaudu.",
     faq_q5: "Kes saab hääletada?",
     faq_a5: "Kõik vanuses 14–21 aastat.",
   },
@@ -299,23 +299,23 @@ const translations = {
     projects_intro: "Examples of my work and initiatives.",
     project1_title: "Game Development on Roblox",
     project1_text:
-      "From 2021 to 2025, I created Roblox games under Akomon777 and Akomon333.",
+      "From 2021 to 2025, I created Roblox games under Akomon777 and Akomon333. I helped with the development of Undertale: A day of the future in 2023.",
     project2_title: "District Initiatives",
     project2_text:
       "I participate in 'Noored kui linnaosa areng' – youth projects in Lasnamäe.",
     project3_title: "Working with Data",
     project3_text:
-      "I build forecasting projects. Code available on GitHub.",
+      "I build forecasting projects. Code available on https://github.com/Akomon333.",
     support_title: "Support",
     support_text:
-      "Akim is hardworking, knowledgeable, and listens to others — exactly the kind of leader we need.",
+      "Akim is hardworking, knowledgeable, and listens to others — exactly the kind of leader we need. - Sagar Yadav (Works as a programmer since 2007)",
     events_title: "Upcoming Events",
     events_text: "No events yet, but coming soon!",
     vote_title: "Make your voice heard",
     vote_text:
       "Every vote matters in making our schools better.",
     vote_date_title: "Voting Date",
-    vote_date_text: "November 2025 • 10–15",
+    vote_date_text: "November 2025 • 10–16",
     vote_step1_title: "Voting",
     vote_step1_text:
       "Voting details will be added closer to the date.",
@@ -327,7 +327,7 @@ const translations = {
     faq_q3: "What if I don't have time?",
     faq_a3: "Tell your friends about us — that helps too!",
     faq_q4: "How to share ideas?",
-    faq_a4: "Write via Gmail or Facebook.",
+    faq_a4: "Write via Gmail akimestfornoortevolikogu@gmail.com or Facebook https://www.facebook.com/profile.php?id=61570973228399.",
     faq_q5: "Who can vote?",
     faq_a5: "Everyone aged 14–21.",
   },
