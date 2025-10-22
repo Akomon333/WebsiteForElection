@@ -1202,3 +1202,56 @@ main{
   main{padding:3.5rem 1.25rem}
   .about-content{padding:2rem}
 }
+
+/* ===== Language switcher (safe, minimal) ===== */
+.lang-switcher {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  margin-left: 1rem; /* adjust or remove to fit your layout */
+}
+.lang-switcher button {
+  all: unset;                /* reset inherited button styles safely */
+  cursor: pointer;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.08);
+  font-size: 0.9rem;
+  background: rgba(255,255,255,0.02);
+}
+.lang-switcher button:hover { opacity: 0.95; }
+
+/* ===== Mobile menu class-based behavior ===== */
+.nav-links {
+  display: flex; /* keep your default desktop style */
+  gap: 1rem;
+}
+
+/* On small screens, hide nav-links by default and show when .is-open */
+@media (max-width: 640px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--nav-bg, #fff); /* fallback */
+    padding: 0.75rem 1rem;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    z-index: 50;
+  }
+  .nav-links.is-open {
+    display: flex;
+  }
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Prevent scrolling when nav is open (optional) */
+body.nav-open {
+  overflow: hidden;
+}
