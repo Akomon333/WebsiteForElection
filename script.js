@@ -88,6 +88,9 @@ window.setLanguage = setLanguageInternal; // placeholder until function declarat
 /* ===== TRANSLATIONS (same content as before — add more keys if needed) ===== */
 const translations = {
   ru: {
+    telegram_channel: "Телеграм канал",
+    events_title1: "Дебаты в noortevolikogu",
+    events_text1: "Я буду участвовать в дебатах против других кандидатов. Подробнее об этом можно узнать в моём канале.",
     tag_leadership: "Лидерство",
     tag_teamwork: "Командная работа",
     tag_programming: "Программирование",
@@ -147,7 +150,7 @@ const translations = {
     support_text:
       "У Акима не только есть знания, он умеет слушать и трудится. Такой лидер нужен каждой нации. - Sagar Yadav(Работает программистом с 2007 года)",
     events_title: "Предстоящие события",
-    events_text: "Пока ничего нет, но скоро появится!",
+    events_text: "Присоединяйтесь к нам на этих мероприятиях, чтобы узнать больше о нас и весело провести время.",
     vote_title: "Дайте услышать свой голос",
     vote_text:
       "Каждый голос имеет значение для того, чтобы сделать наши школы лучше.",
@@ -170,6 +173,9 @@ const translations = {
   },
 
   et: {
+    telegram_channel: "Telegrami kanal",
+    events_title1: "Debatt Noortevolikogus",
+    events_text1: "Ma osalen väitlustel teiste kandidaatidega. Rohkem teavet selle kohta leiad minu Telegrami kanalist.",
     tag_leadership: "Juhtimine",
     tag_teamwork: "Meeskonnatöö",
     tag_programming: "Programmeerimine",
@@ -229,7 +235,7 @@ const translations = {
     support_text:
       "Akim mitte ainult ei tea, vaid oskab kuulata ja töötab kõvasti. Sellist juhti on igal rahval vaja. - Sagar Yadav (Programmeeri alates 2007. aastast)",
     events_title: "Tulevased üritused",
-    events_text: "Hetkel pole midagi, aga varsti tuleb!",
+    events_text: "Liitu meiega nende ürituste ajal, et rohkem meist teada saada ja lõbusalt aega veeta.",
     vote_title: "Anna oma hääl",
     vote_text:
       "Iga hääl loeb, et muuta meie koolid paremaks.",
@@ -251,6 +257,9 @@ const translations = {
   },
 
   en: {
+    telegram_channel: "Telegram channel",
+    events_title1: "Debates in Noortevolikogu",
+    events_text1: "I will be participating in the Noortevolikogu debates against other candidates. You can learn more about it on my Telegram channel.",
     tag_leadership: "Leadership",
     tag_teamwork: "Teamwork",
     tag_programming: "Programming",
@@ -310,7 +319,7 @@ const translations = {
     support_text:
       "Akim is hardworking, knowledgeable, and listens to others — exactly the kind of leader we need. - Sagar Yadav (Works as a programmer since 2007)",
     events_title: "Upcoming Events",
-    events_text: "No events yet, but coming soon!",
+    events_text: "Join us at these events to learn more about us and have a great time.",
     vote_title: "Make your voice heard",
     vote_text:
       "Every vote matters in making our schools better.",
