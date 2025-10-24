@@ -88,6 +88,9 @@ window.setLanguage = setLanguageInternal; // placeholder until function declarat
 /* ===== TRANSLATIONS (same content as before — add more keys if needed) ===== */
 const translations = {
   ru: {
+    supporters_header: "Сторонников",
+    events_header: "Мероприятий",
+    endorsements_header: "Поддержки",
     telegram_channel: "Телеграм канал",
     events_title1: "Дебаты в noortevolikogu",
     events_text1: "Я буду участвовать в дебатах против других кандидатов. Подробнее об этом можно узнать в моём канале.",
@@ -163,8 +166,8 @@ const translations = {
     faq_q1: "Через какие соцсети можно связаться?",
     faq_a1: "Телеграм: Facebook: моя страница.",
     faq_q2: "Чем можно помочь в команде?",
-    faq_a2: "Задачи распределяются по навыкам и интересам.",
-    faq_q3: "Что если нет времени?",
+    faq_a2: "Задачи распределяются по навыкам и интересам. Что-нибудь найдется для каждого.",
+    faq_q3: "Что если я хочу помочь но нет времени?",
     faq_a3: "Расскажите о нас друзьям — это тоже помощь!",
     faq_q4: "Как предложить идею?",
     faq_a4: "Напишите на Gmail akimestfornoortevolikogu@gmail.com или Facebook https://www.facebook.com/profile.php?id=61570973228399.",
@@ -173,6 +176,9 @@ const translations = {
   },
 
   et: {
+    supporters_header: "Toetajad",
+    events_header: "Üritused",
+    endorsements_header: "Toetused",
     telegram_channel: "Telegrami kanal",
     events_title1: "Debatt Noortevolikogus",
     events_text1: "Ma osalen väitlustel teiste kandidaatidega. Rohkem teavet selle kohta leiad minu Telegrami kanalist.",
@@ -247,8 +253,8 @@ const translations = {
     faq_q1: "Kuidas ühendust võtta?",
     faq_a1: "Telegram: meie kanal, Facebook: minu leht.",
     faq_q2: "Kuidas aidata meeskonnas?",
-    faq_a2: "Ülesanded jaotatakse oskuste ja huvide järgi.",
-    faq_q3: "Mis siis, kui mul pole aega?",
+    faq_a2: "Ülesanded jagatakse oskuste ja huvide järgi. Leiame midagi igaühele.",
+    faq_q3: "Mis siis, kui mul pole aega aidata, aga ma tahaksin seda teha?",
     faq_a3: "Räägi meist oma sõpradele – seegi on abi!",
     faq_q4: "Kuidas ideid esitada?",
     faq_a4: "Kirjuta Gmaili akimestfornoortevolikogu@gmail.com või Facebooki https://www.facebook.com/profile.php?id=61570973228399 kaudu.",
@@ -257,6 +263,9 @@ const translations = {
   },
 
   en: {
+    supporters_header: "Supporters",
+    events_header: "Events",
+    endorsements_header: "Endorsements",
     telegram_channel: "Telegram channel",
     events_title1: "Debates in Noortevolikogu",
     events_text1: "I will be participating in the Noortevolikogu debates against other candidates. You can learn more about it on my Telegram channel.",
@@ -332,8 +341,8 @@ const translations = {
     faq_q1: "How to contact us?",
     faq_a1: "Telegram: our channel, Facebook: my page.",
     faq_q2: "How can I help?",
-    faq_a2: "Tasks are distributed by skills and interests.",
-    faq_q3: "What if I don't have time?",
+    faq_a2: "Tasks are distributed by skills and interests. We will find something for everyone.",
+    faq_q3: "What if I don't have time to help but I want to?",
     faq_a3: "Tell your friends about us — that helps too!",
     faq_q4: "How to share ideas?",
     faq_a4: "Write via Gmail akimestfornoortevolikogu@gmail.com or Facebook https://www.facebook.com/profile.php?id=61570973228399.",
