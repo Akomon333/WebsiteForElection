@@ -88,6 +88,9 @@ window.setLanguage = setLanguageInternal; // placeholder until function declarat
 /* ===== TRANSLATIONS (same content as before — add more keys if needed) ===== */
 const translations = {
   ru: {
+    plan_course_title: "Финансирование хобби",
+    plan_course_text:
+      "Если у кого-то есть хобби, например программирование, я создам систему конкурсов, в которых победитель или победители смогут получить финансирование для развития своего хобби, например оплату обучающего курса.",
     supporters_header: "Сторонников",
     events_header: "Мероприятий",
     endorsements_header: "Поддержки",
@@ -176,6 +179,9 @@ const translations = {
   },
 
   et: {
+    plan_course_title: "Hobi rahastamine",
+    plan_course_text:
+      "Kui kellelgi on hobi, näiteks programmeerimine, loon ma võistlussüsteemi, kus võitja või võitjad saavad rahastuse oma hobi arendamiseks, näiteks koolituskursuse eest tasumiseks.",
     supporters_header: "Toetajad",
     events_header: "Üritused",
     endorsements_header: "Toetused",
@@ -263,6 +269,9 @@ const translations = {
   },
 
   en: {
+    plan_course_title: "Hobby funding",
+    plan_course_text:
+      "If someone has a hobby, for example programming, I will create a competition system where the winner or winners can receive funding to develop their hobby, such as paying for a training course.",
     supporters_header: "Supporters",
     events_header: "Events",
     endorsements_header: "Endorsements",
