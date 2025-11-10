@@ -88,7 +88,16 @@ window.setLanguage = setLanguageInternal; // placeholder until function declarat
 /* ===== TRANSLATIONS (same content as before — add more keys if needed) ===== */
 const translations = {
   ru: {
-    plan_course_title: "Финансирование хобби",
+    vote_step1_title: "Зайдите на сайт госуслуг",
+    vote_step1_text: "Ссылка на сайт taotlen.tallinn.ee",
+    vote_step2_title: "Вхождение в аккаунт",
+    vote_step2_text: "Если вы ещё не входили в аккаунт, у вас должна быть кнопка “Login sisse”. Нажмите на неё и войдите любым удобным способом. Если на главной странице в правом верхнем углу нет этой кнопки, а вместо неё отображается “Login välja”, переходите к шагу 3.",
+    vote_step3_title: "Переход на страницу голосования",
+    vote_step3_text: "На главной странице в разделе E-teenused нажмите на Tallinna linna noortevolikogu valimised",
+    vote_step4_title: "Переход на страницу голосования 2",
+    vote_step4_text: "Пролистайте вниз и нажмите синюю кнопку Hääletama",
+    vote_step5_title: "Как проголосовать на странице голосования?",
+    vote_step5_text: "Найдите моё имя и нажмите на пустой квадрат около него",
     plan_course_text:
       "Если у кого-то есть хобби, например программирование, я создам систему конкурсов, в которых победитель или победители смогут получить финансирование для развития своего хобби, например оплату обучающего курса.",
     supporters_header: "Сторонников",
@@ -179,6 +188,16 @@ const translations = {
   },
 
   et: {
+     vote_step1_title: "Avage riigiportaali veebileht",
+    vote_step1_text: "Link veebilehele taotlen.tallinn.ee",
+    vote_step2_title: "Sisselogimine kontole",
+    vote_step2_text: "Kui te ei ole veel oma kontole sisse loginud, peaks teil olema nupp “Login sisse”. Vajutage sellele ja logige sisse endale sobival viisil. Kui avalehe paremas ülanurgas seda nuppu ei ole ja selle asemel kuvatakse “Login välja”, minge edasi 3. sammule.",
+    vote_step3_title: "Valimislehele liikumine",
+    vote_step3_text: "Avalehel jaotises E-teenused vajutage Tallinna linna noortevolikogu valimised",
+    vote_step4_title: "Valimislehele liikumine 2",
+    vote_step4_text: "Kerige alla ja vajutage sinist nuppu Hääletama",
+    vote_step5_title: "Kuidas hääletamislehel hääletada?",
+    vote_step5_text: "Leidke minu nimi ja vajutage tühjale ruudule selle kõrval",
     plan_course_title: "Hobi rahastamine",
     plan_course_text:
       "Kui kellelgi on hobi, näiteks programmeerimine, loon ma võistlussüsteemi, kus võitja või võitjad saavad rahastuse oma hobi arendamiseks, näiteks koolituskursuse eest tasumiseks.",
@@ -269,6 +288,16 @@ const translations = {
   },
 
   en: {
+    vote_step1_title: "Go to the e-services website",
+    vote_step1_text: "Link to the website taotlen.tallinn.ee",
+    vote_step2_title: "Log in to your account",
+    vote_step2_text: "If you haven’t logged into your account yet, you should see a “Login sisse” button. Click it and sign in using any convenient method. If there is no such button on the top right of the main page and instead you see “Login välja”, proceed to step 3.",
+    vote_step3_title: "Go to the voting page",
+    vote_step3_text: "On the main page, in the E-teenused section, click Tallinna linna noortevolikogu valimised",
+    vote_step4_title: "Go to the voting page (step 2)",
+    vote_step4_text: "Scroll down and click the blue button Hääletama",
+    vote_step5_title: "How to vote on the voting page?",
+    vote_step5_text: "Find my name and click the empty square next to it",
     plan_course_title: "Hobby funding",
     plan_course_text:
       "If someone has a hobby, for example programming, I will create a competition system where the winner or winners can receive funding to develop their hobby, such as paying for a training course.",
