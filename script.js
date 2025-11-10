@@ -89,7 +89,7 @@ window.setLanguage = setLanguageInternal; // placeholder until function declarat
 const translations = {
   ru: {
     vote_step1_title: "Зайдите на сайт госуслуг",
-    vote_step1_text: "Ссылка на сайт taotlen.tallinn.ee",
+    vote_step1_text: "taotlen.tallinn.ee",
     vote_step2_title: "Вхождение в аккаунт",
     vote_step2_text: "Если вы ещё не входили в аккаунт, у вас должна быть кнопка “Login sisse”. Нажмите на неё и войдите любым удобным способом. Если на главной странице в правом верхнем углу нет этой кнопки, а вместо неё отображается “Login välja”, переходите к шагу 3.",
     vote_step3_title: "Переход на страницу голосования",
@@ -171,9 +171,6 @@ const translations = {
       "Каждый голос имеет значение для того, чтобы сделать наши школы лучше.",
     vote_date_title: "Дата голосования",
     vote_date_text: "Ноябрь 2025 • 10–16 число",
-    vote_step1_title: "Голосование",
-    vote_step1_text:
-      "Информация о том как проголосовать будет добавлена позже.",
     faq_title: "Часто задаваемые вопросы",
     faq_q1: "Через какие соцсети можно связаться?",
     faq_a1: "Телеграм: Facebook: моя страница.",
@@ -188,8 +185,8 @@ const translations = {
   },
 
   et: {
-     vote_step1_title: "Avage riigiportaali veebileht",
-    vote_step1_text: "Link veebilehele taotlen.tallinn.ee",
+    vote_step1_title: "Avage riigiportaali veebileht",
+    vote_step1_text: "taotlen.tallinn.ee",
     vote_step2_title: "Sisselogimine kontole",
     vote_step2_text: "Kui te ei ole veel oma kontole sisse loginud, peaks teil olema nupp “Login sisse”. Vajutage sellele ja logige sisse endale sobival viisil. Kui avalehe paremas ülanurgas seda nuppu ei ole ja selle asemel kuvatakse “Login välja”, minge edasi 3. sammule.",
     vote_step3_title: "Valimislehele liikumine",
@@ -272,8 +269,6 @@ const translations = {
       "Iga hääl loeb, et muuta meie koolid paremaks.",
     vote_date_title: "Hääletamise kuupäev",
     vote_date_text: "November 2025 • 10.–16. kuupäev",
-    vote_step1_title: "Hääletamine",
-    vote_step1_text: "Teave hääletamise kohta lisatakse hiljem.",
     faq_title: "KKK",
     faq_q1: "Kuidas ühendust võtta?",
     faq_a1: "Telegram: meie kanal, Facebook: minu leht.",
@@ -289,7 +284,7 @@ const translations = {
 
   en: {
     vote_step1_title: "Go to the e-services website",
-    vote_step1_text: "Link to the website taotlen.tallinn.ee",
+    vote_step1_text: "taotlen.tallinn.ee",
     vote_step2_title: "Log in to your account",
     vote_step2_text: "If you haven’t logged into your account yet, you should see a “Login sisse” button. Click it and sign in using any convenient method. If there is no such button on the top right of the main page and instead you see “Login välja”, proceed to step 3.",
     vote_step3_title: "Go to the voting page",
@@ -372,9 +367,6 @@ const translations = {
       "Every vote matters in making our schools better.",
     vote_date_title: "Voting Date",
     vote_date_text: "November 2025 • 10–16",
-    vote_step1_title: "Voting",
-    vote_step1_text:
-      "Voting details will be added closer to the date.",
     faq_title: "Frequently Asked Questions",
     faq_q1: "How to contact us?",
     faq_a1: "Telegram: our channel, Facebook: my page.",
@@ -472,6 +464,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const initial = saved || (translations[browserShort] ? browserShort : 'ru');
 
   applyTranslations(initial);
+
+  // Expand long vote steps horizontally
+  function adjustVoteSteps() {
+    const steps = document.querySelectorAll('.vote-step');
+    steps.forEach(s => {
+      const p = s.querySelector('p');
+      if (!p) return;
+      const words = p.textContent.trim().split(/\s+/).length;
+      // long text -> span more columns; thresholds tuned for typical layouts
+      s.classList.remove('wide','wide-large');
+      if (words > 60) s.classList.add('wide-large');
+      else if (words > 28) s.classList.add('wide');
+    });
+  }
+
+  adjustVoteSteps();
+  window.addEventListener('resize', adjustVoteSteps);
 
   console.info('Language system initialized. Current:', initial);
 });
